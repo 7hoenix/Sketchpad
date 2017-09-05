@@ -35,7 +35,8 @@ defmodule Sketchpad.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:briefly, "~> 0.3"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:mix_test_watch, "~> 0.5", only: :dev, runtime: false}]
   end
 
   defp aliases do
