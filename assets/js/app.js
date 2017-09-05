@@ -8,8 +8,8 @@ socket.connect()
 let App = {
   init(){
     this.padChannel = socket.channel("pad:lobby")
-
-    this.padChannel.on("tick", payload => console.log("tick", payload))
+    this.el = document.getElementById("sketchpad")
+    this.pad = new Sketchpad(this.el, window.userId)
 
     this.padChannel.join()
       .receive("ok", resp => console.log("joined", resp))
